@@ -2,7 +2,7 @@
 
 Epitech helper to manage git repositories
 
-This script contains some useful commands to manage your Epitech repositories using blih.
+This script contains some useful commands to manage your Epitech repositories using [blih](https://blih.saumon.io/blih.py).
 
 ## How to
 
