@@ -38,8 +38,8 @@ showuser: show the current epitech user account
 new: create a new repository
 delete: delete a repository
 list: list your repositories
-clone: clone a repository
-cloneall: clone all your repositories
+clone <git-flags>: clone a repository
+cloneall <git-flags>: clone all your repositories
 clean: clean temporary files from emacs
 acl: set the acl on a repository
 ignore: edit your .gitignore file of your current repository
@@ -93,13 +93,13 @@ function cmd_clone() {
 		then
 		src_user=$user
 	fi
-	git clone git@git.epitech.eu:/$src_user/$repository_name
+	git clone git@git.epitech.eu:/$src_user/$repository_name $@
 }
 
 function cmd_cloneall() {
 	for repository in $( cmd_list )
 		do
-		if git clone git@git.epitech.eu:/$user/$repository
+		if git clone git@git.epitech.eu:/$user/$repository $@
 			then
 			green "$repository successfully cloned!\n"
 		else
@@ -175,5 +175,5 @@ if [ $# == 0 ]
 	then
 	usage
 else
-	cmd_$1
+	cmd_$1 ${@:2}
 fi
