@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 function usage() {
 	echo "usage: epitech command"
@@ -144,6 +144,19 @@ function cmd_ignore() {
 		fi
 		nano .gitignore
 	fi
+}
+
+function cmd_norm() {
+	if which epitech-norm > /dev/null; then
+		epitech-norm
+		exit
+	fi
+	red 'epitech-norm seems to not be installed, please download an norm-checker, put it in /usr/local/bin and rename it epitech-norm, or make a symbolic link.' >&2
+	echo 'example: https://github.com/ronanboiteau/NormEZ'
+}
+
+function cmd_csfml() {
+	echo "Please refer to https://gist.github.com/paullaffitte/c3f028dc64a55e920fa8afabff70673e for SFML or https://gist.github.com/paullaffitte/85f0d24d93408ab90b9e0600df8db4ac for CSFML."
 }
 
 #------#
