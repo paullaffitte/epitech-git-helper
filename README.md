@@ -24,4 +24,4 @@ norm: check your norm
 csfml: install the full CSFML library (be careful, contains prohibited functions)
 ```
 
-`clone` and `cloneall` allow use of git flags, for instance `./epitech.sh cloneall --mirror` will execute a `git clone --mirror <repository>` for each repository you have, allowing you to push them to GitHub or GitLab for instance.
+`clone` and `cloneall` allow use of git flags, for instance `./epitech.sh cloneall --mirror` will execute a `git clone --mirror <repository>` for each repository you have, allowing you to push of mirror of them to GitHub or GitLab for instance.
